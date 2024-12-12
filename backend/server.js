@@ -8,6 +8,8 @@ dotenv.config();
 const app = express();
 const PORT = ENV_VARS.PORT;
 
+app.use(express.json()); //will allow us to pars req.body
+
 app.use("/api/v1/auth", authRoutes);
 
 
