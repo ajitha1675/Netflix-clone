@@ -61,7 +61,7 @@ const LoginPage = () => {
           </form>
           <div className="text-center text-gray-400">
              Don't have an account?{""}
-            <Link to= {"/signUp"} className="text-red-500 hover:underline">
+            <Link to= {"/signup"} className="text-red-500 hover:underline">
                Sign Up
             </Link>
           </div>
