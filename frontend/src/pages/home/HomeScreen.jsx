@@ -5,8 +5,9 @@ function HomeScreen() {
   const { logout } = useAuthStore();
 
   return (
-    <div> 
-        <button onClick={logout}>Log Out</button>
+    <div className='relative h-screen text-white'> 
+        {/* <Navbar/> */}
+        <button onclick={logout}>logout</button>
     </div>
   )
 }
