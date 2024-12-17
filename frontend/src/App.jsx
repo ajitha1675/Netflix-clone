@@ -10,12 +10,12 @@ import { useEffect } from "react";
 
 
 function App() {
-  const {user, isCheckingAuth, authCheck } = useAuthStore;
-  console.log("auth user is here:",User);
-
-  // useEffect(()=>{
-  //   authCheck();
-  // }, [authCheck]);
+  const {user, isCheckingAuth, authCheck} = useAuthStore();
+  console.log("auth user is here", user);
+  
+  useEffect (() =>{
+    authCheck();
+  })
 
   if(isCheckingAuth) {
     return (
