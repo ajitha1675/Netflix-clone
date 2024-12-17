@@ -10,12 +10,11 @@ import { useEffect } from "react";
 
 
 function App() {
-  const {user, isCheckingAuth, authCheck} = useAuthStore();
-  console.log("auth user is here", user);
+  const {user, isCheckingAuth, authCheck  } = useAuthStore;
   
-  useEffect (() =>{
-    authCheck();
-  })
+  // useEffect(() =>{
+  //   authCheck();
+  // },[])
 
   if(isCheckingAuth) {
     return (
@@ -30,9 +29,9 @@ function App() {
   return (
     <>
    <Routes>
-       <Route path='/' element={<HomePage/>} />
-       <Route path='/login' element={ !user ? <LoginPage/> : < Navigate to={"/"}/> }/>
-       <Route path='/singup' element= {!user ? <SingUp/> : <Navigate to={"/"}/>} />
+        <Route path='/' element={<HomePage />} />
+				<Route path='/login' element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
+				<Route path='/signup' element={!user ? <SingUp/> : <Navigate to={"/"} />} />
    </Routes>
    <Footer/>
    <Toaster/>
